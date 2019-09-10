@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <jsp-config>
+        <jsp-property-group>
+            <description>html encoding</description>
+            <display-name>JSPConfiguration</display-name>
+            <url-pattern>*.html</url-pattern>
+            <page-encoding>UTF-8</page-encoding>
+        </jsp-property-group>
+    </jsp-config>
+
+    <servlet>
+        <servlet-name>JAR Download</servlet-name>
+        <servlet-class>com.example.web.FileServe</servlet-class>
+    </servlet>
+    
+    <servlet-mapping>
+        <servlet-name>JAR Download</servlet-name>
+        <url-pattern>/jar</url-pattern>
+    </servlet-mapping>
+</web-app>
